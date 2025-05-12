@@ -4,142 +4,514 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Integral de Gestión Empresarial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Sistema Integral de Gestión Empresarial - VitalSoftware</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
+        /* Estilos rápidos para emular colores y placeholders */
+        :root {
+            --vital-yellow: #FFD700;
+            /* Ajusta este color al exacto de la imagen */
+            --vital-gray: #f8f9fa;
         }
 
-        .hero {
-            padding: 5rem 1rem;
+        .bg-vital-yellow {
+            background-color: var(--vital-yellow) !important;
         }
 
-        .cta-btn {
-            margin-right: 1rem;
+        .text-vital-yellow {
+            color: var(--vital-yellow) !important;
         }
 
-        .icon-section i {
-            font-size: 2rem;
-            color: #f7c600;
+        .btn-vital-yellow {
+            background-color: var(--vital-yellow);
+            border-color: var(--vital-yellow);
+            color: #333;
+            /* O blanco si contrasta mejor */
+            font-weight: bold;
         }
 
-        footer {
-            background-color: #ffcc00;
-            padding: 3rem 1rem;
+        .btn-vital-yellow:hover {
+            background-color: #e6c200;
+            /* Un poco más oscuro al pasar el mouse */
+            border-color: #e6c200;
+            color: #333;
+        }
+
+        .placeholder-img {
+            background-color: #e9ecef;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            border-radius: 0.375rem;
+            /* Bootstrap's default border-radius */
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .client-logo img {
+            max-height: 50px;
+            /* Ajusta según necesidad */
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .client-logo img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .footer-bg {
+            background-color: var(--vital-yellow);
+        }
+
+        .footer-bg a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-bg a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bg .social-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .footer-bg .btn-social {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            /* Remove underline from link */
+        }
+
+        .footer-bg .btn-whatsapp {
+            background-color: #25D366;
+        }
+
+        .footer-bg .btn-messenger {
+            background-color: #00B2FF;
+        }
+
+        .footer-bg .btn-social i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .footer-bg .btn-submit {
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+            border: none;
+        }
+
+        .footer-bg .form-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background-color: var(--vital-yellow);
+            color: #333;
+        }
+
+        .nav-pills .nav-link {
+            color: #6c757d;
+            /* Color para tabs no activos */
+            border: 1px solid #dee2e6;
+            margin: 0 5px 5px 0;
+            background-color: #f8f9fa;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#">LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#modulos">Módulos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#app">App</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#empresa">La empresa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item"><a class="btn btn-warning ms-3" href="#">Descargar presentación</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modulos">Módulos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#app">App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empresa">La empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
+                <a href="#" class="btn btn-vital-yellow ms-lg-3">Descargar presentación</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero text-center">
-        <div class="container">
-            <h1><strong>Sistema Integral de Gestión Empresarial</strong></h1>
-            <p class="lead">Optimiza todos los procesos clave de tu empresa desde una sola plataforma: ágil, segura y
-                diseñada para crecer contigo.</p>
-            <a href="#contacto" class="btn btn-warning cta-btn">Conocer más</a>
-            <a href="#contacto" class="btn btn-outline-dark">Contacto</a>
-        </div>
-    </section>
-
-    <!-- Principales Módulos -->
-    <section id="modulos" class="text-center py-5 bg-light">
-        <div class="container">
-            <h2>Principales módulos</h2>
-            <div class="row mt-4">
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-box"></i>
-                    <p>Control de stock e inventario</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-cash-register"></i>
-                    <p>Ventas a crédito y contado</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-coins"></i>
-                    <p>Tesorería y finanzas</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-truck"></i>
-                    <p>Distribución</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-users"></i>
-                    <p>RR.HH.</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-chart-line"></i>
-                    <p>Reportes & Informes</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-file-invoice-dollar"></i>
-                    <p>Módulo Contable</p>
-                </div>
-                <div class="col-6 col-md-3 icon-section">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p>VITAL E-commerce</p>
+    <main>
+        <section class="bg-light text-dark pt-5 pb-4" style="margin-top: 56px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold">Sistema Integral de Gestión Empresarial</h1>
+                        <p class="lead my-4">La solución completa que une todas las áreas de tu empresa desde un solo
+                            lugar. Intuitiva, ágil, segura y diseñada para crecer contigo.</p>
+                        <a href="#contacto" class="btn btn-vital-yellow btn-lg me-2">Contactar</a>
+                        <a href="#modulos" class="btn btn-outline-secondary btn-lg">Conocer Módulos</a>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Contacto -->
-    <footer id="contacto">
+        <section id="modulos" class="section-padding">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Principales módulos</h2>
+                <div class="row text-center g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-boxes-stacked fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Control de stock & Inventario</h5>
+                        <p class="text-muted small">Módulo Base. Gestión completa de Existencias.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-hand-holding-dollar fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Ventas a Crédito y Cuentas por Cobrar</h5>
+                        <p class="text-muted small">Simplifica la gestión de crédito a clientes y maneja las cuentas a
+                            pagar.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-cash-register fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Tesorería y Finanzas</h5>
+                        <p class="text-muted small">Administra ingresos, egresos, flujos de caja y conciliaciones por
+                            turnos y fechas.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-truck-fast fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Distribución</h5>
+                        <p class="text-muted small">Maneja la logística y reparto con rutas y zonas personalizables.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-users fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">RRHH</h5>
+                        <p class="text-muted small">Gestión integral del talento humano: legajos, asistencias hasta el
+                            cálculo de salarios.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-chart-pie fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Reportes & Informes</h5>
+                        <p class="text-muted small">Reportes generales de clientes y productos, balances, análisis y
+                            dashboards personalizados.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-calculator fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">Módulo Contable</h5>
+                        <p class="text-muted small">Simplificación de procesos contables y fiscales. Mayor control
+                            financiero y empresarial.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <i class="fas fa-store fa-3x text-vital-yellow mb-3"></i>
+                        <h5 class="fw-bold">VITAL E-commerce</h5>
+                        <p class="text-muted small">Ventas en línea y comercio electrónico integrado con el sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold">Módulo Base</h2>
+                        <p class="lead">Este módulo permite la configuración y administración de los datos fundamentales
+                            para el funcionamiento del sistema.</p>
+                        <ul>
+                            <li>Artículos</li>
+                            <li>Sub-Grupos de Artículos</li>
+                            <li>Proveedores</li>
+                            <li>Clientes</li>
+                            <li>Grupos de Artículos</li>
+                            <li>y más...</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="placeholder-img p-5">
+                            Espacio para Imagen / Gráfico representativo del Módulo Base
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Tu empresa bajo control</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-abastecimiento" type="button" role="tab"
+                                    aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-cuentas-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-cuentas" type="button" role="tab"
+                                    aria-controls="pills-cuentas" aria-selected="false">Cuentas a pagar</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-tesoreria-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-tesoreria" type="button" role="tab"
+                                    aria-controls="pills-tesoreria" aria-selected="false">Tesorería</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-rrhh-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
+                                    aria-selected="false">RRHH</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active p-3 border bg-light rounded" id="pills-abastecimiento"
+                                role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
+                                <h5 class="fw-bold">Abastecimiento</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Pedidos sugeridos (Facturas)</li>
+                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
+                                            <li>Órdenes de Compra/Pago</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Remisión</li>
+                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
+                                            <li>Costeo de artículos (Registro de compras)</li>
+                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="placeholder-img mt-3" style="min-height: 150px;">
+                                    Espacio para gráfico/imagen de Abastecimiento
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-cuentas" role="tabpanel"
+                                aria-labelledby="pills-cuentas-tab">
+                                <h5 class="fw-bold">Cuentas a pagar</h5>
+                                <p>Detalles sobre la gestión de cuentas por pagar...</p>
+                                <div class="placeholder-img mt-3" style="min-height: 150px;">
+                                    Espacio para gráfico/imagen de Cuentas a Pagar
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-tesoreria" role="tabpanel"
+                                aria-labelledby="pills-tesoreria-tab">
+                                <h5 class="fw-bold">Tesorería</h5>
+                                <p>Detalles sobre el manejo de tesorería, flujos de caja, etc...</p>
+                                <div class="placeholder-img mt-3" style="min-height: 150px;">
+                                    Espacio para gráfico/imagen de Tesorería
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-rrhh" role="tabpanel"
+                                aria-labelledby="pills-rrhh-tab">
+                                <h5 class="fw-bold">RRHH</h5>
+                                <p>Detalles sobre la gestión de recursos humanos...</p>
+                                <div class="placeholder-img mt-3" style="min-height: 150px;">
+                                    Espacio para gráfico/imagen de RRHH
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="app" class="section-padding bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold">Aplicación Móvil</h2>
+                        <p>Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.
+                        </p>
+                        <ul>
+                            <li>Inventario General y/o Parcial</li>
+                            <li>Auditoría física de Mercaderías</li>
+                            <li>Corte de Inventario (personalizable)</li>
+                            <li>Multi-depósito (conteo por depósito)</li>
+                            <li>Transferencia entre depósitos</li>
+                            <li>Mayor visualización de los resultados del inventario</li>
+                        </ul>
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-dark btn-lg me-2 mb-2">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                            <a href="#" class="btn btn-dark btn-lg mb-2">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                        <img src="data:image/png;base64,..." alt="App Móvil" class="img-fluid"
+                            style="max-width: 350px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <h2 class="fw-bold">Caja (Punto de Venta)</h2>
+                        <p>Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar
+                            transacciones.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Facturación electrónica directa</li>
+                                    <li>Multi-moneda</li>
+                                    <li>Facturación por código de barras o descripción</li>
+                                    <li>Registro de cliente eventual o extracción de datos del cliente particular</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                    <li>Generación de arqueo de caja</li>
+                                    <li>... y más</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
+                        <div class="placeholder-img p-5">
+                            Espacio para Imagen / Gráfico del Punto de Venta
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="empresa" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 fw-bold">Clientes</h2>
+                <p class="text-center text-muted mb-5">Nos sentimos honrados en trabajar con estas destacadas empresas
+                </p>
+                <div class="row g-4 justify-content-center align-items-center">
+                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum1" alt="Cliente 1"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum2" alt="Cliente 2"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Gism" alt="Cliente 3"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum4" alt="Cliente 4"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum5" alt="Cliente 5"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="footer-bg pt-5 pb-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h5>Acerca de</h5>
-                    <p>Somos una empresa especializada en el desarrollo de soluciones informáticas para la gestión
-                        empresarial. Con más de 10 años de experiencia, trabajamos junto a nuestros clientes para crear
-                        herramientas digitales seguras, ágiles y adaptadas a sus necesidades.</p>
-                    <p>Email: contacto@vitalsoftware.com.py<br>Tel: (595) 983 031 029</p>
-                    <a class="btn btn-success me-2" href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a class="btn btn-primary" href="#"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h5 class="fw-bold text-dark mb-3">Acerca de</h5>
+                    <p class="text-dark small">Empresa especializada en el desarrollo de software de gestión
+                        empresarial. Transformamos nuestros conocimientos y experiencias trabajando con empresas líderes
+                        en soluciones integrales adaptadas a las necesidades de cada compañía, sea cual sea su rubro o
+                        tamaño.</p>
+                    <p class="text-dark small">Contáctanos para transformar la gestión de tu compañía ahora.</p>
+                    <div>
+                        <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="btn-social btn-whatsapp me-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://m.me/TUIDDEFACEBOOK" target="_blank" class="btn-social btn-messenger">
+                            <i class="fab fa-facebook-messenger"></i> Facebook Messenger
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h5>Envíanos un mensaje</h5>
+
+                <div class="col-lg-6">
+                    <h5 class="fw-bold text-dark mb-3">Envíanos un mensaje</h5>
+                    <p class="text-dark small">Nos contactamos en menos de 24 hs.</p>
                     <form>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre">
+                            <label for="contactName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Tu nombre completo"
+                                required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Correo electrónico">
+                            <label for="contactEmail" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="tuemail@ejemplo.com"
+                                required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+                            <label for="contactMessage" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="contactMessage" rows="4"
+                                placeholder="Escribe tu consulta aquí..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark">Enviar</button>
+                        <button type="submit" class="btn btn-submit w-100">Enviar</button>
                     </form>
                 </div>
             </div>
-            <p class="text-center mt-4">VitalSoftware© 2025. Todos los Derechos Reservados.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="bg-dark text-white-50 text-center py-3">
+        <div class="container">
+            <small>VitalSoftware &copy; 2025. Todos los Derechos Reservados.</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
