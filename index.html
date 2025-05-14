@@ -18,9 +18,11 @@
     <style>
         /* Estilos rápidos para emular colores y placeholders */
         :root {
-            --vital-yellow: #FFD700;
+            --vital-yellow: #FF9900;
+            --vital-yellow-light:#FFEC00;
             /* Ajusta este color al exacto de la imagen */
             --vital-gray: #f8f9fa;
+            --vital-maroon: #750000;
         }
 
         .bg-vital-yellow {
@@ -31,19 +33,21 @@
             color: var(--vital-yellow) !important;
         }
 
+        .text-vital-maroon {
+            color: var(--vital-maroon) !important;
+        }
+
         .btn-vital-yellow {
             background-color: var(--vital-yellow);
             border-color: var(--vital-yellow);
-            color: #333;
-            /* O blanco si contrasta mejor */
-            font-weight: bold;
+            color: #fff;
         }
 
         .btn-vital-yellow:hover {
-            background-color: #e6c200;
+            background-color: #e76900;
             /* Un poco más oscuro al pasar el mouse */
-            border-color: #e6c200;
-            color: #333;
+            border-color: #e76800;
+            color: #fff;
         }
 
         .placeholder-img {
@@ -60,11 +64,11 @@
         }
 
         .section-padding {
-            padding: 60px 0;
+            padding: 120px 0;
         }
 
         .client-logo img {
-            max-height: 50px;
+            max-height: 80px;
             /* Ajusta según necesidad */
             filter: grayscale(100%);
             opacity: 0.7;
@@ -150,6 +154,7 @@
 
 <body>
 
+    <!-- Logo + Navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">LOGO</a>
@@ -175,21 +180,22 @@
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
-                <a href="#" class="btn btn-vital-yellow ms-lg-3">Descargar presentación</a>
+                <a href="#" class="btn btn-vital-yellow ms-lg-3 rounded-pill"><small>Descargar presentación</small></a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="bg-light text-dark pt-5 pb-4" style="margin-top: 56px;">
+        <!-- hero -->
+        <section class="bg-light text-dark py-5 mb-5" style="margin-top: 56px;">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center py-5">
                     <div class="col-lg-7">
-                        <h1 class="display-4 fw-bold">Sistema Integral de Gestión Empresarial</h1>
-                        <p class="lead my-4">La solución completa que une todas las áreas de tu empresa desde un solo
+                        <h1 class="display-3 fw-bold">Sistema Integral de Gestión Empresarial</h1>
+                        <p class="lead my-4">La solución <strong>Vital</strong> que une todas las áreas de tu empresa desde un solo
                             lugar. Intuitiva, ágil, segura y diseñada para crecer contigo.</p>
-                        <a href="#contacto" class="btn btn-vital-yellow btn-lg me-2">Contactar</a>
-                        <a href="#modulos" class="btn btn-outline-secondary btn-lg">Conocer Módulos</a>
+                            <a href="#modulos" class="btn btn-vital-yellow btn-lg me-2 rounded-pill">Conocer más...</a>
+                        <a href="#contacto" class="btn btn-outline-secondary btn-lg rounded-pill">Contactar</a>
                     </div>
                     <div class="col-lg-5 d-none d-lg-block">
                     </div>
@@ -197,6 +203,7 @@
             </div>
         </section>
 
+        <!-- Principales módulos -->
         <section id="modulos" class="section-padding">
             <div class="container">
                 <h2 class="text-center mb-5 fw-bold">Principales módulos</h2>
@@ -250,6 +257,7 @@
             </div>
         </section>
 
+        <!-- Módulo base -->
         <section class="section-padding bg-light">
             <div class="container">
                 <div class="row align-items-center">
@@ -275,6 +283,7 @@
             </div>
         </section>
 
+        <!-- Módulos varios -->
         <section class="section-padding">
             <div class="container">
                 <h2 class="text-center mb-5 fw-bold">Tu empresa bajo control</h2>
@@ -358,6 +367,7 @@
             </div>
         </section>
 
+        <!-- App -->
         <section id="app" class="section-padding bg-light">
             <div class="container">
                 <div class="row align-items-center">
@@ -383,13 +393,15 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                        <img src="data:image/png;base64,..." alt="App Móvil" class="img-fluid"
-                            style="max-width: 350px;">
+                        <div class="placeholder-img p-5">
+                            Espacio para Imagen / Gráfico del Punto de Venta
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Caja -->
         <section class="section-padding">
             <div class="container">
                 <div class="row align-items-center">
@@ -424,31 +436,27 @@
             </div>
         </section>
 
-        <section id="empresa" class="section-padding bg-light">
+        <!-- clientes -->
+        <section id="clientes" class="section-padding bg-light">
             <div class="container">
                 <h2 class="text-center mb-4 fw-bold">Clientes</h2>
                 <p class="text-center text-muted mb-5">Nos sentimos honrados en trabajar con estas destacadas empresas
                 </p>
-                <div class="row g-4 justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
-                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum1" alt="Cliente 1"
-                            class="img-fluid">
+                        <img src="https://placehold.co/200x80" alt="Cliente 1">
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
-                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum2" alt="Cliente 2"
-                            class="img-fluid">
+                        <img src="https://placehold.co/200x80" alt="Cliente 2">
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
-                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Gism" alt="Cliente 3"
-                            class="img-fluid">
+                        <img src="https://placehold.co/200x80" alt="Cliente 3">
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
-                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum4" alt="Cliente 4"
-                            class="img-fluid">
+                        <img src="https://placehold.co/200x80" alt="Cliente 4">
                     </div>
                     <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
-                        <img src="https://via.placeholder.com/150x50/CCCCCC/888888?text=Logoipsum5" alt="Cliente 5"
-                            class="img-fluid">
+                        <img src="https://placehold.co/200x80" alt="Cliente 5">
                     </div>
                 </div>
             </div>
@@ -458,6 +466,7 @@
     <footer id="contacto" class="footer-bg pt-5 pb-4">
         <div class="container">
             <div class="row">
+                <!-- Acerca de -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h5 class="fw-bold text-dark mb-3">Acerca de</h5>
                     <p class="text-dark small">Empresa especializada en el desarrollo de software de gestión
@@ -475,6 +484,7 @@
                     </div>
                 </div>
 
+                <!-- Formulario -->
                 <div class="col-lg-6">
                     <h5 class="fw-bold text-dark mb-3">Envíanos un mensaje</h5>
                     <p class="text-dark small">Nos contactamos en menos de 24 hs.</p>
@@ -501,7 +511,7 @@
         </div>
     </footer>
 
-    <div class="bg-dark text-white-50 text-center py-3">
+    <div class="bg-warning text-black-50 text-center py-3">
         <div class="container">
             <small>VitalSoftware &copy; 2025. Todos los Derechos Reservados.</small>
         </div>
