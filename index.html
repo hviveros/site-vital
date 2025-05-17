@@ -60,7 +60,6 @@
             color: #6c757d;
             font-style: italic;
             border-radius: 0.375rem;
-            /* Bootstrap's default border-radius */
         }
 
         .section-padding {
@@ -69,7 +68,6 @@
 
         .client-logo img {
             max-height: 80px;
-            /* Ajusta según necesidad */
             filter: grayscale(100%);
             opacity: 0.7;
             transition: all 0.3s ease-in-out;
@@ -108,7 +106,6 @@
             color: white;
             font-weight: bold;
             text-decoration: none;
-            /* Remove underline from link */
         }
 
         .footer-bg .btn-whatsapp {
@@ -196,7 +193,7 @@
                         <p class="lead my-4">La solución <strong>Vital</strong> que une todas las áreas de tu empresa desde un solo
                             lugar. Intuitiva, ágil, segura y diseñada para crecer contigo.</p>
                             <a href="#modulos" class="btn btn-vital-yellow btn-lg me-2 rounded-pill">Conocer más...</a>
-                        <a href="#contacto" class="btn btn-outline-secondary btn-lg rounded-pill">Contactar</a>
+                            <a href="#contacto" class="btn btn-outline-secondary btn-lg rounded-pill">Contactar</a>
                     </div>
                     <div class="col-lg-5 d-none d-lg-block">
                     </div>
@@ -207,7 +204,7 @@
         <!-- Principales módulos -->
         <section id="modulos" class="section-padding">
             <div class="container">
-                <h2 class="text-center mb-5 fw-bold">Principales módulos</h2>
+                <h2 class="text-center mb-5 lead display-6">Principales módulos</h2>
                 <div class="row g-5">
                     <div class="p-4 col-md-6 col-lg-3 hover-shadow">
                         <div class="card border-0 border-bottom border-warning border-2" style="height: 100%;">
@@ -279,17 +276,25 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h2 class="fw-bold">Módulo Base</h2>
+                        <h2 class="mb-5 lead display-6">Módulo Base</h2>
                         <p class="lead">Este módulo permite la configuración y administración de los datos fundamentales
                             para el funcionamiento del sistema.</p>
-                        <ul>
-                            <li>Artículos</li>
-                            <li>Sub-Grupos de Artículos</li>
-                            <li>Proveedores</li>
-                            <li>Clientes</li>
-                            <li>Grupos de Artículos</li>
-                            <li>y más...</li>
-                        </ul>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li>Artículos</li>
+                                    <li>Sub-Grupos de Artículos</li>
+                                    <li>Tipo de productos</li>
+                                    <li>Proveedores</li>
+                                </ul>
+                            </div>
+                            <div class="col ul">
+                                <li>Clientes</li>
+                                <li>Marcas</li>
+                                <li>Grupos de Artículos</li>
+                                <li>y más...</li>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="placeholder-img p-5">
@@ -303,46 +308,46 @@
         <!-- Módulos varios -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="text-center mb-5 fw-bold">Tu empresa bajo control</h2>
+                <h2 class="mb-5 text-center lead display-6">Tu empresa bajo control</h2>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-10 mx-auto">
                         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
+                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-abastecimiento" type="button" role="tab"
                                     aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-cuentas-tab" data-bs-toggle="pill"
+                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-cuentas-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-cuentas" type="button" role="tab"
                                     aria-controls="pills-cuentas" aria-selected="false">Cuentas a pagar</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-tesoreria-tab" data-bs-toggle="pill"
+                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-tesoreria-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-tesoreria" type="button" role="tab"
                                     aria-controls="pills-tesoreria" aria-selected="false">Tesorería</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-rrhh-tab" data-bs-toggle="pill"
+                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-rrhh-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
                                     aria-selected="false">RRHH</button>
                             </li>
                         </ul>
-
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active p-3 border bg-light rounded" id="pills-abastecimiento"
+                            <div class="tab-pane fade show active p-3" id="pills-abastecimiento"
                                 role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
-                                <h5 class="fw-bold">Abastecimiento</h5>
                                 <div class="row">
                                     <div class="col-md-6">
+                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
+                                            Espacio para gráfico/imagen de Abastecimiento
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>Abastecimiento</small></h5>
                                         <ul>
                                             <li>Pedidos sugeridos (Facturas)</li>
                                             <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
                                             <li>Órdenes de Compra/Pago</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul>
                                             <li>Remisión</li>
                                             <li>Proceso de Factura, Nota Crédito/Débito</li>
                                             <li>Costeo de artículos (Registro de compras)</li>
@@ -350,32 +355,71 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="placeholder-img mt-3" style="min-height: 150px;">
-                                    Espacio para gráfico/imagen de Abastecimiento
-                                </div>
                             </div>
-                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-cuentas" role="tabpanel"
+                            <div class="tab-pane fade p-3" id="pills-cuentas" role="tabpanel"
                                 aria-labelledby="pills-cuentas-tab">
-                                <h5 class="fw-bold">Cuentas a pagar</h5>
-                                <p>Detalles sobre la gestión de cuentas por pagar...</p>
-                                <div class="placeholder-img mt-3" style="min-height: 150px;">
-                                    Espacio para gráfico/imagen de Cuentas a Pagar
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
+                                            Espacio para gráfico/imagen de Cuentas a pagar
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>Cuentas a pagar</small></h5>
+                                        <ul>
+                                            <li>Pedidos sugeridos (Facturas)</li>
+                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
+                                            <li>Órdenes de Compra/Pago</li>
+                                            <li>Remisión</li>
+                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
+                                            <li>Costeo de artículos (Registro de compras)</li>
+                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-tesoreria" role="tabpanel"
+                            <div class="tab-pane fade p-3" id="pills-tesoreria" role="tabpanel"
                                 aria-labelledby="pills-tesoreria-tab">
-                                <h5 class="fw-bold">Tesorería</h5>
-                                <p>Detalles sobre el manejo de tesorería, flujos de caja, etc...</p>
-                                <div class="placeholder-img mt-3" style="min-height: 150px;">
-                                    Espacio para gráfico/imagen de Tesorería
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
+                                            Espacio para gráfico/imagen de Tesorería
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>Tesorería</small></h5>
+                                        <ul>
+                                            <li>Pedidos sugeridos (Facturas)</li>
+                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
+                                            <li>Órdenes de Compra/Pago</li>
+                                            <li>Remisión</li>
+                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
+                                            <li>Costeo de artículos (Registro de compras)</li>
+                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade p-3 border bg-light rounded" id="pills-rrhh" role="tabpanel"
+                            <div class="tab-pane fade p-3" id="pills-rrhh" role="tabpanel"
                                 aria-labelledby="pills-rrhh-tab">
-                                <h5 class="fw-bold">RRHH</h5>
-                                <p>Detalles sobre la gestión de recursos humanos...</p>
-                                <div class="placeholder-img mt-3" style="min-height: 150px;">
-                                    Espacio para gráfico/imagen de RRHH
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
+                                            Espacio para gráfico/imagen de RRHH
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>RRHH</small></h5>
+                                        <ul>
+                                            <li>Pedidos sugeridos (Facturas)</li>
+                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
+                                            <li>Órdenes de Compra/Pago</li>
+                                            <li>Remisión</li>
+                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
+                                            <li>Costeo de artículos (Registro de compras)</li>
+                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -387,9 +431,9 @@
         <!-- App -->
         <section id="app" class="section-padding bg-light">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center lead">
                     <div class="col-lg-6">
-                        <h2 class="fw-bold">Aplicación Móvil</h2>
+                        <h2 class="mb-5 lead display-6">Aplicación Móvil</h2>
                         <p>Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.
                         </p>
                         <ul>
@@ -400,14 +444,13 @@
                             <li>Transferencia entre depósitos</li>
                             <li>Mayor visualización de los resultados del inventario</li>
                         </ul>
-                        <div class="mt-4">
-                            <a href="#" class="btn btn-dark btn-lg me-2 mb-2">
-                                <i class="fab fa-apple"></i> App Store
-                            </a>
-                            <a href="#" class="btn btn-dark btn-lg mb-2">
-                                <i class="fab fa-google-play"></i> Google Play
-                            </a>
-                        </div>
+                        <h2 class="h5 mt-4 mb-3">Multiplataforma</h2>
+                        <a href="#" class="btn btn-dark btn-lg me-2 mb-2">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="#" class="btn btn-dark btn-lg mb-2">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0 text-center">
                         <div class="placeholder-img p-5">
@@ -423,7 +466,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 order-lg-2">
-                        <h2 class="fw-bold">Caja (Punto de Venta)</h2>
+                        <h2 class="mb-5 lead display-6">Caja - Punto de Venta</h2>
                         <p>Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar
                             transacciones.</p>
                         <div class="row">
@@ -456,23 +499,23 @@
         <!-- clientes -->
         <section id="clientes" class="section-padding bg-light">
             <div class="container">
-                <h2 class="text-center mb-4 fw-bold">Clientes</h2>
-                <p class="text-center text-muted mb-5">Nos sentimos honrados en trabajar con estas destacadas empresas
+                <h2 class="text-center mb-5 lead display-6">Clientes</h2>
+                <p class="text-center lead mb-4">Nos sentimos honrados en trabajar con estas destacadas empresas
                 </p>
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
                         <img src="https://placehold.co/200x80" alt="Cliente 1">
                     </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
                         <img src="https://placehold.co/200x80" alt="Cliente 2">
                     </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
                         <img src="https://placehold.co/200x80" alt="Cliente 3">
                     </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
                         <img src="https://placehold.co/200x80" alt="Cliente 4">
                     </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center client-logo">
+                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
                         <img src="https://placehold.co/200x80" alt="Cliente 5">
                     </div>
                 </div>
@@ -482,20 +525,20 @@
 
     <footer id="contacto" class="footer-bg pt-5 pb-4">
         <div class="container">
-            <div class="row">
+            <div class="row my-4">
                 <!-- Acerca de -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h5 class="fw-bold text-dark mb-3">Acerca de</h5>
-                    <p class="text-dark small">Empresa especializada en el desarrollo de software de gestión
+                    <h5 class="fw-bold display-6 text-dark mb-3 lead"><small>Acerca de</small></h5>
+                    <p class="lead">Empresa especializada en el desarrollo de software de gestión
                         empresarial. Transformamos nuestros conocimientos y experiencias trabajando con empresas líderes
                         en soluciones integrales adaptadas a las necesidades de cada compañía, sea cual sea su rubro o
                         tamaño.</p>
-                    <p class="text-dark small">Contáctanos para transformar la gestión de tu compañía ahora.</p>
+                    <p class="lead">Contáctanos para transformar la gestión de tu compañía ahora.</p>
                     <div>
-                        <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" class="btn-social btn-whatsapp me-2">
+                        <a href="https://wa.me/#" target="_blank" class="btn-social btn-whatsapp me-2">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="https://m.me/TUIDDEFACEBOOK" target="_blank" class="btn-social btn-messenger">
+                        <a href="https://m.me/#" target="_blank" class="btn-social btn-messenger">
                             <i class="fab fa-facebook-messenger"></i> Facebook Messenger
                         </a>
                     </div>
@@ -503,25 +546,22 @@
 
                 <!-- Formulario -->
                 <div class="col-lg-6">
-                    <h5 class="fw-bold text-dark mb-3">Envíanos un mensaje</h5>
-                    <p class="text-dark small">Nos contactamos en menos de 24 hs.</p>
+                    <h5 class="fw-bold display-6 text-dark mb-3 lead"><small>Envíanos un mensaje</small></h5>
+                    <p class="text-dark">Nos contactamos en menos de 24 hs.</p>
                     <form>
                         <div class="mb-3">
-                            <label for="contactName" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="contactName" placeholder="Tu nombre completo"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <label for="contactEmail" class="form-label">Correo electrónico</label>
                             <input type="email" class="form-control" id="contactEmail" placeholder="tuemail@ejemplo.com"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <label for="contactMessage" class="form-label">Mensaje</label>
                             <textarea class="form-control" id="contactMessage" rows="4"
                                 placeholder="Escribe tu consulta aquí..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-submit w-100">Enviar</button>
+                        <button type="button" class="btn btn-submit w-100">Enviar</button>
                     </form>
                 </div>
             </div>
