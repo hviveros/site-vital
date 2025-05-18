@@ -172,7 +172,7 @@
                         <a class="nav-link" href="#app">App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#empresa">La empresa</a>
+                        <a class="nav-link" href="#ecommerce">E-commerce</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
@@ -189,7 +189,7 @@
             <div class="container">
                 <div class="row align-items-center py-5">
                     <div class="col-lg-7">
-                        <h1 class="display-3 fw-bold">Sistema Integral de Gestión Empresarial</h1>
+                        <h1 class="display-3 fw-bold">Desarrollo & Implementación de Sistemas de Gestión Empresarial</h1>
                         <p class="lead my-4">La solución <strong>Vital</strong> que une todas las áreas de tu empresa desde un solo
                             lugar. Intuitiva, ágil, segura y diseñada para crecer contigo.</p>
                             <a href="#modulos" class="btn btn-vital-yellow btn-lg me-2 rounded-pill">Conocer más...</a>
@@ -206,7 +206,7 @@
             <div class="container">
                 <h2 class="text-center mb-5 lead display-6">Principales módulos</h2>
                 <div class="row g-5">
-                    <div class="p-4 col-md-6 col-lg-3 hover-shadow">
+                    <div class="p-4 col-md-6 col-lg-3 opacity-75-hover">
                         <div class="card border-0 border-bottom border-warning border-2" style="height: 100%;">
                             <i class="fas fa-boxes-stacked fa-2x text-vital-yellow mb-3"></i>
                             <h6 class="lead"><strong>Control de stock & Inventario</strong></h6>
@@ -308,7 +308,7 @@
         <!-- Módulos varios -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="mb-5 text-center lead display-6">Tu empresa bajo control</h2>
+                <h2 class="mb-5 text-center lead display-6">VITAL Market</h2>
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
@@ -316,11 +316,6 @@
                                 <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-abastecimiento" type="button" role="tab"
                                     aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-cuentas-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-cuentas" type="button" role="tab"
-                                    aria-controls="pills-cuentas" aria-selected="false">Cuentas a pagar</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-tesoreria-tab" data-bs-toggle="pill"
@@ -331,6 +326,11 @@
                                 <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-rrhh-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
                                     aria-selected="false">RRHH</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-caja-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-caja" type="button" role="tab"
+                                    aria-controls="pills-caja" aria-selected="false">Caja</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
@@ -344,28 +344,6 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>Abastecimiento</small></h5>
-                                        <ul>
-                                            <li>Pedidos sugeridos (Facturas)</li>
-                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
-                                            <li>Órdenes de Compra/Pago</li>
-                                            <li>Remisión</li>
-                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
-                                            <li>Costeo de artículos (Registro de compras)</li>
-                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade p-3" id="pills-cuentas" role="tabpanel"
-                                aria-labelledby="pills-cuentas-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
-                                            Espacio para gráfico/imagen de Cuentas a pagar
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>Cuentas a pagar</small></h5>
                                         <ul>
                                             <li>Pedidos sugeridos (Facturas)</li>
                                             <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
@@ -422,6 +400,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane fade p-3" id="pills-caja" role="tabpanel"
+                                aria-labelledby="pills-caja-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="placeholder-img mt-3" style="min-height: 350px;">
+                                            Espacio para gráfico/imagen de Cuentas a pagar
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>Caja - Punto de Venta</small></h5>
+                                        <p>Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
+                                        <ul>
+                                            <li>Facturación electrónica directa</li>
+                                            <li>Multi-moneda</li>
+                                            <li>Facturación por código de barras o descripción</li>
+                                            <li>Registro de cliente eventual</li>
+                                            <li>Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                            <li>Generación de arqueo de caja</li>
+                                            <li>y más...</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -461,31 +462,22 @@
             </div>
         </section>
 
-        <!-- Caja -->
-        <section class="section-padding">
+        <!-- E-commerce -->
+        <section class="section-padding" id="ecommerce">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center lead">
                     <div class="col-lg-6 order-lg-2">
-                        <h2 class="mb-5 lead display-6">Caja - Punto de Venta</h2>
-                        <p>Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar
-                            transacciones.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Facturación electrónica directa</li>
-                                    <li>Multi-moneda</li>
-                                    <li>Facturación por código de barras o descripción</li>
-                                    <li>Registro de cliente eventual o extracción de datos del cliente particular</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
-                                    <li>Generación de arqueo de caja</li>
-                                    <li>... y más</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h2 class="mb-5 lead display-6">VITAL E-commerce</h2>
+                        <p>Ventas en línea y comercio electrónico integrado con el sistema. Personalización de la tienda online con tu marca.</p>
+                        <ul>
+                            <li>Relación de varias imágenes/videos por articulo</li>
+                            <li>Características & Especificaciones de productos</li>
+                            <li>Integración con plataformas de pagos online</li>
+                            <li>Control de múltiples locales de envío</li>
+                            <li>Formulario de registro de clientes</li>
+                            <li>Módulo de imágenes publicitarias</li>
+                            <li>Integración con VITALMarket</li>
+                        </ul>
                     </div>
                     <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
                         <div class="placeholder-img p-5">
@@ -497,7 +489,7 @@
         </section>
 
         <!-- clientes -->
-        <section id="clientes" class="section-padding bg-light">
+        <section class="section-padding bg-light">
             <div class="container">
                 <h2 class="text-center mb-5 lead display-6">Clientes</h2>
                 <p class="text-center lead mb-4">Nos sentimos honrados en trabajar con estas destacadas empresas
@@ -528,7 +520,7 @@
             <div class="row my-4">
                 <!-- Acerca de -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h5 class="fw-bold display-6 text-dark mb-3 lead"><small>Acerca de</small></h5>
+                    <h5 class="fw-bold display-6 text-dark mb-3 lead text-vital-maroon"><small>Acerca de</small></h5>
                     <p class="lead">Empresa especializada en el desarrollo de software de gestión
                         empresarial. Transformamos nuestros conocimientos y experiencias trabajando con empresas líderes
                         en soluciones integrales adaptadas a las necesidades de cada compañía, sea cual sea su rubro o
@@ -546,19 +538,19 @@
 
                 <!-- Formulario -->
                 <div class="col-lg-6">
-                    <h5 class="fw-bold display-6 text-dark mb-3 lead"><small>Envíanos un mensaje</small></h5>
+                    <h5 class="fw-bold display-6 text-dark mb-3 lead text-vital-maroon"><small>Envíanos un mensaje</small></h5>
                     <p class="text-dark">Nos contactamos en menos de 24 hs.</p>
                     <form>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="contactName" placeholder="Tu nombre completo"
+                            <input type="text" class="form-control rounded-0" id="contactName" placeholder="Tu nombre completo"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="contactEmail" placeholder="tuemail@ejemplo.com"
+                            <input type="email" class="form-control rounded-0" id="contactEmail" placeholder="tuemail@ejemplo.com"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" id="contactMessage" rows="4"
+                            <textarea class="form-control rounded-0" id="contactMessage" rows="4"
                                 placeholder="Escribe tu consulta aquí..." required></textarea>
                         </div>
                         <button type="button" class="btn btn-submit w-100">Enviar</button>
