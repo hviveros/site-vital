@@ -56,9 +56,9 @@
                 <div class="row align-items-center py-5">
                     <div class="col-lg-7">
                         <h1 class="display-3 fw-bold">Desarrollo & Implementación de Sistemas de Gestión Empresarial</h1>
-                        <p class="lead my-4">La solución <strong>Vital</strong> que une todas las áreas de tu empresa desde un solo
-                            lugar. Intuitiva, ágil, segura y diseñada para crecer contigo.</p>
-                            <a href="#modulos" class="btn btn-vital-yellow btn-lg me-2 rounded-pill">Conocer más...</a>
+                        <p class="lead my-4 text-muted">La solución <strong>Vital</strong> que une todas las áreas de tu empresa en un solo
+                            lugar. Diseñada para crecer contigo.</p>
+                            <a href="#modulos" class="btn btn-vital-yellow btn-lg rounded-pill">Conocer más...</a>
                             <a href="#contacto" class="btn btn-outline-secondary btn-lg rounded-pill">Contactar</a>
                     </div>
                     <div class="col-lg-5 d-none d-lg-block">
@@ -146,29 +146,29 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h2 class="mb-5 lead display-6">Módulo Base</h2>
-                        <p class="lead">Este módulo permite la configuración y administración de los datos fundamentales
+                        <p class="text-muted">Este módulo permite la configuración y administración de los datos fundamentales
                             para el funcionamiento del sistema.</p>
-                        <div class="row">
+                        <div class="row text-muted small">
                             <div class="col">
-                                <ul>
-                                    <li>Artículos</li>
-                                    <li>Sub-Grupos de Artículos</li>
-                                    <li>Tipo de productos</li>
-                                    <li>Proveedores</li>
+                                <ul class="list-unstyled">
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Artículos</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Sub-Grupos de Artículos</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Tipo de productos</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Proveedores</li>
                                 </ul>
                             </div>
-                            <div class="col ul">
-                                <li>Clientes</li>
-                                <li>Marcas</li>
-                                <li>Grupos de Artículos</li>
-                                <li>y más...</li>
+                            <div class="col">
+                                <ul class="list-unstyled">
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Clientes</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Marcas</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> Grupos de Artículos</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-yellow"></i> y más...</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0">
-                        <div class="placeholder-img p-5">
-                            Espacio para Imagen / Gráfico representativo del Módulo Base
-                        </div>
+                        <imagen>
                     </div>
                 </div>
             </div>
@@ -178,31 +178,32 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="mb-5 text-center lead display-6">VITAL Market</h2>
+                <p class="text-center text-muted mb-5"> Vista preliminar de algunas de las principales funcionalidades del sistema de gestión</p>
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-abastecimiento" type="button" role="tab"
                                     aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-tesoreria-tab" data-bs-toggle="pill"
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-tesoreria-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-tesoreria" type="button" role="tab"
                                     aria-controls="pills-tesoreria" aria-selected="false">Tesorería</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-rrhh-tab" data-bs-toggle="pill"
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-rrhh-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
                                     aria-selected="false">RRHH</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="btn btn-outline-warning btn-sm rounded-pill px-4 mx-1" id="pills-caja-tab" data-bs-toggle="pill"
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-caja-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-caja" type="button" role="tab"
                                     aria-controls="pills-caja" aria-selected="false">Caja</button>
                             </li>
                         </ul>
-                        <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-content small" id="pills-tabContent">
                             <div class="tab-pane fade show active p-3" id="pills-abastecimiento"
                                 role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
                                 <div class="row">
@@ -213,14 +214,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>Abastecimiento</small></h5>
-                                        <ul>
-                                            <li>Pedidos sugeridos (Facturas)</li>
-                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
-                                            <li>Órdenes de Compra/Pago</li>
-                                            <li>Remisión</li>
-                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
-                                            <li>Costeo de artículos (Registro de compras)</li>
-                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        <p class="text-muted">Registro de Documentos (Facturas). Compras, gastos, notas de crédito. Transferencias internas de mercaderías entre suscursales.</p>
+                                        <ul class="list-unstyled text-muted">
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Cuentas Corrientes (Crédito, Contado)</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Órdenes de Compra/Pago</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Remisión</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Proceso de Factura, Nota Crédito/Débito</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Costeo de artículos (Registro de compras)</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Clasificación por proveedor (artículos más comprados/pagados)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -235,14 +236,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>Tesorería</small></h5>
-                                        <ul>
-                                            <li>Pedidos sugeridos (Facturas)</li>
-                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
-                                            <li>Órdenes de Compra/Pago</li>
-                                            <li>Remisión</li>
-                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
-                                            <li>Costeo de artículos (Registro de compras)</li>
-                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        <p class="text-muted">Control detallado de movimientos de caja y rendiciones por turnos y fechas.</p>
+                                        <ul class="list-unstyled text-muted">
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Rendición de caja</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Confirmación o anulación de rendiciones</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Arqueo de cajas</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro detallado</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Informes de movimientos</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Impresión de Informes en todos los formatos</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -257,14 +258,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>RRHH</small></h5>
-                                        <ul>
-                                            <li>Pedidos sugeridos (Facturas)</li>
-                                            <li>Cuentas Corrientes (Crédito, Anticipo, Notas de débito)</li>
-                                            <li>Órdenes de Compra/Pago</li>
-                                            <li>Remisión</li>
-                                            <li>Proceso de Factura, Nota Crédito/Débito</li>
-                                            <li>Costeo de artículos (Registro de compras)</li>
-                                            <li>Clasificación por proveedor (artículos más comprados/pagados)</li>
+                                        <p class="text-muted">Gestión integral del talento humano, desde el registro hasta el cálculo de salarios</p>
+                                        <ul class="list-unstyled text-muted">
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro detallado por funcionario, fecha y conceptos</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Observaciones específicas y límites de crédito</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Control de horarios de ingresos/salidas</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Procesos de pre-liquidación y cierre de mes</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Informe de salarios, comisiones, horas extras</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -279,15 +279,14 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>Caja - Punto de Venta</small></h5>
-                                        <p>Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
-                                        <ul>
-                                            <li>Facturación electrónica directa</li>
-                                            <li>Multi-moneda</li>
-                                            <li>Facturación por código de barras o descripción</li>
-                                            <li>Registro de cliente eventual</li>
-                                            <li>Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
-                                            <li>Generación de arqueo de caja</li>
-                                            <li>y más...</li>
+                                        <p class="text-muted">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
+                                        <ul class="list-unstyled text-muted">
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación electrónica directa</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Multi-moneda</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación por código de barras o descripción</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de cliente eventual</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Generación de arqueo de caja</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -301,20 +300,21 @@
         <!-- App -->
         <section id="app" class="section-padding bg-light">
             <div class="container">
-                <div class="row align-items-center lead">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h2 class="mb-5 lead display-6">Aplicación Móvil</h2>
-                        <p>Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.
+                        <p class="text-muted">Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.
                         </p>
-                        <ul>
-                            <li>Inventario General y/o Parcial</li>
-                            <li>Auditoría física de Mercaderías</li>
-                            <li>Corte de Inventario (personalizable)</li>
-                            <li>Multi-depósito (conteo por depósito)</li>
-                            <li>Transferencia entre depósitos</li>
-                            <li>Mayor visualización de los resultados del inventario</li>
+                        <ul class="list-unstyled text-muted">
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Inventario General y/o Parcial</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Auditoría física de Mercaderías</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Corte de Inventario (personalizable)</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Multi-depósito (conteo por depósito)</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Transferencia entre depósitos</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Mayor visualización de los resultados del inventario</li>
                         </ul>
                         <h2 class="h5 mt-4 mb-3">Multiplataforma</h2>
+                        <p class="text-muted">Tu app estará disponible desde las principales plataformas</p>
                         <a href="#" class="btn btn-dark btn-lg me-2 mb-2">
                             <i class="fab fa-apple"></i> App Store
                         </a>
@@ -334,18 +334,18 @@
         <!-- E-commerce -->
         <section class="section-padding" id="ecommerce">
             <div class="container">
-                <div class="row align-items-center lead">
+                <div class="row align-items-center">
                     <div class="col-lg-6 order-lg-2">
                         <h2 class="mb-5 lead display-6">VITAL E-commerce</h2>
-                        <p>Ventas en línea y comercio electrónico integrado con el sistema. Personalización de la tienda online con tu marca.</p>
-                        <ul>
-                            <li>Relación de varias imágenes/videos por articulo</li>
-                            <li>Características & Especificaciones de productos</li>
-                            <li>Integración con plataformas de pagos online</li>
-                            <li>Control de múltiples locales de envío</li>
-                            <li>Formulario de registro de clientes</li>
-                            <li>Módulo de imágenes publicitarias</li>
-                            <li>Integración con VITALMarket</li>
+                        <p class="text-muted">Ventas en línea y comercio electrónico integrado con el sistema. Personalización de la tienda online con tu marca.</p>
+                        <ul class="list-unstyled text-muted">
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Relación de varias imágenes/videos por articulo</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Características & Especificaciones de productos</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Integración con plataformas de pagos online</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Control de múltiples locales de envío</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Formulario de registro de clientes</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Módulo de imágenes publicitarias</li>
+                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Integración con VITALMarket</li>
                         </ul>
                     </div>
                     <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
@@ -360,8 +360,8 @@
         <!-- clientes -->
         <section class="section-padding bg-light">
             <div class="container">
-                <h2 class="text-center mb-5 lead display-6">Clientes</h2>
-                <p class="text-center lead mb-4">Nos sentimos honrados en trabajar con estas destacadas empresas
+                <h2 class="text-center mb-4 lead display-6">Clientes</h2>
+                <p class="text-center mb-4">Nos sentimos honrados en trabajar con estas destacadas empresas
                 </p>
                 <div class="row justify-content-center align-items-center">
                     <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
