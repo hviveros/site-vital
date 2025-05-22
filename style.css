@@ -1,8 +1,6 @@
-/* Estilos rápidos para emular colores y placeholders */
 :root {
     --vital-yellow: #ff9900;
     --vital-yellow-light: #ffec00;
-    /* Ajusta este color al exacto de la imagen */
     --vital-gray: #f8f9fa;
     --vital-maroon: #750000;
 }
@@ -11,8 +9,16 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.bg-light {
+    background-color: #f7f8fa !important;
+}
+
 .bg-vital-yellow {
     background-color: var(--vital-yellow) !important;
+}
+
+.bg-vital-maroon {
+    background-color: var(--vital-maroon) !important;
 }
 
 .btn-vital-yellow {
@@ -51,24 +57,24 @@ body {
     opacity: 1;
 }
 
-.footer-bg {
-    background-color: var(--vital-yellow);
+.bg-vital-gradient {
+    background: linear-gradient(135deg, #F89027 0%, #F37021 100%);
 }
 
-.footer-bg a {
+.bg-vital-gradient a {
     color: #333;
     text-decoration: none;
 }
 
-.footer-bg a:hover {
+.bg-vital-gradient a:hover {
     text-decoration: underline;
 }
 
-.footer-bg .btn-messenger {
+.bg-vital-gradient .btn-messenger {
     background-color: #00b2ff;
 }
 
-.footer-bg .btn-social {
+.bg-vital-gradient .btn-social {
     display: inline-flex;
     align-items: center;
     padding: 10px 15px;
@@ -79,28 +85,17 @@ body {
     text-decoration: none;
 }
 
-.footer-bg .btn-social i {
+.bg-vital-gradient .btn-social i {
     margin-right: 8px;
     font-size: 1.2rem;
 }
 
-.footer-bg .btn-submit {
-    background-color: #fff;
-    color: #333;
-    font-weight: bold;
-    border: none;
-}
-
-.footer-bg .btn-whatsapp {
+.bg-vital-gradient .btn-whatsapp {
     background-color: #25d366;
 }
 
-.footer-bg .form-label {
-    font-weight: bold;
-    color: #333;
-}
 
-.footer-bg .social-icon {
+.bg-vital-gradient .social-icon {
     font-size: 1.5rem;
     margin-right: 10px;
     color: #333;
