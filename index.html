@@ -1,438 +1,443 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Integral de Gestión Empresarial - VitalSoftware</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vital-yellow': '#ff9900',
+                        'vital-yellow-light': '#ffec00',
+                        'vital-gray': '#f8f9fa',
+                        'vital-maroon': '#750000',
+                        'vital-orange-dark': '#F37021',
+                    },
+                    fontFamily: {
+                        sans: ['"Segoe UI"', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-white text-gray-800">
 
-    <!-- Logo + Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://demo.openmartpy.com/img-vital/logo-vital.png" alt="" style="width: 100px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#modulos">Módulos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#app">App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ecommerce">E-commerce</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-vital-yellow ms-lg-3 rounded-pill"><small><i class="fas fa-download"></i> Presentación</small></a>
+    <nav class="bg-vital-gray w-full fixed top-0 left-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <a class="navbar-brand" href="#">
+                    <img src="https://demo.openmartpy.com/img-vital/logo-vital.png" alt="VitalSoftware Logo" class="w-24">
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-6">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-gray-700 hover:text-vital-yellow transition duration-300">Inicio</a></li>
+                        <li><a href="#modulos" class="text-gray-700 hover:text-vital-yellow transition duration-300">Módulos</a></li>
+                        <li><a href="#app" class="text-gray-700 hover:text-vital-yellow transition duration-300">App</a></li>
+                        <li><a href="#ecommerce" class="text-gray-700 hover:text-vital-yellow transition duration-300">E-commerce</a></li>
+                        <li><a href="#contacto" class="text-gray-700 hover:text-vital-yellow transition duration-300">Contacto</a></li>
+                    </ul>
+                    <a href="#" class="bg-gradient-to-br from-vital-yellow to-vital-orange-dark text-white hover:opacity-90 transition duration-300 px-4 py-2 rounded-full text-sm ml-3">
+                        <small><i class="fas fa-download mr-1"></i> Presentación</small>
+                    </a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
             </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-vital-gray">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#" class="text-gray-700 hover:text-vital-yellow transition duration-300">Inicio</a></li>
+                <li><a href="#modulos" class="text-gray-700 hover:text-vital-yellow transition duration-300">Módulos</a></li>
+                <li><a href="#app" class="text-gray-700 hover:text-vital-yellow transition duration-300">App</a></li>
+                <li><a href="#ecommerce" class="text-gray-700 hover:text-vital-yellow transition duration-300">E-commerce</a></li>
+                <li><a href="#contacto" class="text-gray-700 hover:text-vital-yellow transition duration-300">Contacto</a></li>
+                <li>
+                    <a href="#" class="bg-gradient-to-br from-vital-yellow to-vital-orange-dark text-white hover:opacity-90 transition duration-300 px-4 py-2 rounded-full text-sm mt-2 inline-block">
+                        <small><i class="fas fa-download mr-1"></i> Presentación</small>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <main>
-        <!-- hero -->
-        <section class="bg-light text-dark py-5 mb-5" style="margin-top: 56px;">
-            <div class="container">
-                <div class="row align-items-center py-5">
-                    <div class="col-lg-7">
-                        <h1 class="display-3 fw-bold">Desarrollo & Implementación de <span class="text-vital-yellow">Sistemas de Gestión</span> Empresarial</h1>
-                        <p class="lead my-4 text-muted">La solución <strong>Vital</strong> que une todas las áreas de tu empresa en un solo
-                            lugar. Diseñada para crecer contigo.</p>
-                            <a href="#modulos" class="btn btn-vital-yellow btn-lg rounded-pill">Conocer más...</a>
-                            <a href="#contacto" class="btn btn-outline-secondary btn-lg rounded-pill">Contactar</a>
+<main>
+    <section class="bg-vital-gray text-gray-800 pt-14 pb-5 mb-5">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center py-16">
+                    <div class="w-full lg:w-7/12">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Desarrollo & Implementación de <span class="text-vital-yellow">Sistemas de Gestión</span> Empresarial</h1>
+                        <p class="text-xl my-6 text-gray-600">La solución <strong>Vital</strong> que une todas las áreas de tu empresa en un solo lugar. Diseñada para crecer contigo.</p>
+                        <div class="space-x-4 mt-8">
+                             <a href="#modulos" class="bg-gradient-to-br from-vital-yellow to-vital-orange-dark text-white font-bold text-lg px-8 py-3 rounded-full hover:opacity-90 transition-transform duration-300 inline-block">Conocer más...</a>
+                             <a href="#contacto" class="bg-transparent border-2 border-gray-400 text-gray-600 font-bold text-lg px-8 py-3 rounded-full hover:bg-gray-200 hover:border-gray-500 transition-transform duration-300 inline-block">Contactar</a>
+                        </div>
                     </div>
-                    <div class="col-lg-5 d-none d-lg-block">
-                        <img src="https://demo.openmartpy.com/img-vital/hero-3.png" alt="" class="img-fluid">
+                    <div class="w-5/12 hidden lg:block">
+                        <img src="https://demo.openmartpy.com/img-vital/hero-3.png" alt="Dashboard Illustration" class="w-full h-auto">
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <!-- Principales módulos -->
-        <section id="modulos" class="section-padding">
-            <div class="container">
-                <h2 class="text-center mb-5 lead display-6"><span class="text-vital-yellow">Principales</span> módulos</h2>
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3 opacity-75-hover">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-boxes-stacked fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Control de stock & Inventario</strong></h6>
-                            <p class="text-muted small">Módulo Base. Gestión completa de Existencias.</p>
-                        </div>
+    <section id="modulos" class="py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-4xl mb-12"><span class="font-bold text-vital-yellow">Principales</span> módulos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-boxes-stacked fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Control de stock & Inventario</h6>
+                        <p class="text-gray-600 text-sm mt-2">Módulo Base. Gestión completa de Existencias.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-hand-holding-dollar fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Ventas a Crédito y Cuentas por Cobrar</strong></h6>
-                            <p class="text-muted small">Simplifica la gestión de crédito a clientes y maneja las cuentas a
-                                pagar.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-hand-holding-dollar fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Ventas a Crédito y Cuentas por Cobrar</h6>
+                        <p class="text-gray-600 text-sm mt-2">Simplifica la gestión de crédito a clientes y maneja las cuentas a pagar.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-cash-register fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Tesorería y Finanzas</strong></h6>
-                            <p class="text-muted small">Administra ingresos, egresos, flujos de caja y conciliaciones por
-                                turnos y fechas.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-cash-register fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Tesorería y Finanzas</h6>
+                        <p class="text-gray-600 text-sm mt-2">Administra ingresos, egresos, flujos de caja y conciliaciones por turnos y fechas.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-truck-fast fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Distribución</strong></h6>
-                            <p class="text-muted small">Maneja la logística y reparto con rutas y zonas personalizables.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-truck-fast fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Distribución</h6>
+                        <p class="text-gray-600 text-sm mt-2">Maneja la logística y reparto con rutas y zonas personalizables.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-users fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>RRHH</strong></h6>
-                            <p class="text-muted small">Gestión integral del talento humano: legajos, asistencias hasta el
-                                cálculo de salarios.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-users fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">RRHH</h6>
+                        <p class="text-gray-600 text-sm mt-2">Gestión integral del talento humano: legajos, asistencias hasta el cálculo de salarios.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-chart-pie fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Reportes & Informes</strong></h6>
-                            <p class="text-muted small">Reportes generales de clientes y productos, balances, análisis y
-                                dashboards personalizados.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-chart-pie fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Reportes & Informes</h6>
+                        <p class="text-gray-600 text-sm mt-2">Reportes generales de clientes y productos, balances, análisis y dashboards personalizados.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-calculator fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>Módulo Contable</strong></h6>
-                            <p class="text-muted small">Simplificación de procesos contables y fiscales. Mayor control
-                                financiero y empresarial.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-calculator fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">Módulo Contable</h6>
+                        <p class="text-gray-600 text-sm mt-2">Simplificación de procesos contables y fiscales. Mayor control financiero y empresarial.</p>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 border-bottom border-warning border-2 p-4 card-modulos" style="height: 100%;">
-                            <i class="fas fa-store fa-2x text-vital-yellow mb-3"></i>
-                            <h6 class="lead"><strong>VITAL E-commerce</strong></h6>
-                            <p class="text-muted small">Ventas en línea y comercio electrónico integrado con el sistema.</p>
-                        </div>
+                    <div class="bg-white p-6 h-full border-b-4 border-vital-yellow shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-lg overflow-hidden">
+                        <i class="fas fa-store fa-2x text-vital-yellow mb-4"></i>
+                        <h6 class="text-lg font-bold">VITAL E-commerce</h6>
+                        <p class="text-gray-600 text-sm mt-2">Ventas en línea y comercio electrónico integrado con el sistema.</p>
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <!-- Módulo base -->
-        <section class="section-padding bg-vital-gradient text-white">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="mb-5 lead display-6">Módulo Base</h2>
-                        <p class="">Este módulo permite la configuración y administración de los datos fundamentales
-                            para el funcionamiento del sistema.</p>
-                        <div class="row  small">
-                            <div class="col">
-                                <ul class="list-unstyled">
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Sub-Grupos de Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Tipo de productos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Proveedores</li>
+        
+    <section class="py-24 md:py-32 bg-gradient-to-br from-vital-yellow to-vital-orange-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 pr-0 lg:pr-8">
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-6">Módulo Base</h2>
+                    <p class="text-white/90 leading-relaxed mb-6">Este módulo permite la configuración y administración de los datos fundamentales para el funcionamiento del sistema.</p>
+                    <div class="flex flex-wrap text-sm">
+                        <div class="w-full sm:w-1/2">
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Artículos</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Sub-Grupos de Artículos</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Tipo de productos</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Proveedores</li>
+                            </ul>
+                        </div>
+                        <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Clientes</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Marcas</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> Grupos de Artículos</li>
+                                <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-maroon mr-2"></i> y más...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+                    <img src="https://demo.openmartpy.com/img-vital/modulo-base.png" alt="Módulo Base Diagrama" class="w-full h-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-semibold text-center mb-5">VITAL <span class="text-vital-yellow">Market</span></h2>
+            <p class="text-center text-gray-600 mb-10 text-lg">Vista preliminar de algunas de las principales funcionalidades del sistema de gestión</p>
+            <div class="w-full lg:w-10/12 mx-auto">
+                <div class="mb-6 flex flex-wrap justify-center gap-2" role="tablist">
+                    <button type="button" class="tab-button active-tab bg-gradient-to-br from-vital-yellow to-vital-orange-dark text-white text-sm font-medium px-5 py-2.5 rounded-full hover:opacity-90 focus:outline-none" data-target="#pills-abastecimiento" role="tab" aria-selected="true">Abastecimiento</button>
+                    <button type="button" class="tab-button bg-gray-200 text-gray-700 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-300 focus:outline-none" data-target="#pills-tesoreria" role="tab" aria-selected="false">Tesorería</button>
+                    <button type="button" class="tab-button bg-gray-200 text-gray-700 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-300 focus:outline-none" data-target="#pills-rrhh" role="tab" aria-selected="false">RRHH</button>
+                    <button type="button" class="tab-button bg-gray-200 text-gray-700 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-gray-300 focus:outline-none" data-target="#pills-caja" role="tab" aria-selected="false">Caja</button>
+                </div>
+
+                <div class="text-sm">
+                    <div id="pills-abastecimiento" class="tab-pane p-4 rounded-lg bg-white shadow-lg" role="tabpanel">
+                        <div class="flex flex-wrap -mx-3">
+                            <div class="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                                <img src="https://demo.openmartpy.com/img-vital/abastecimiento.png" alt="Abastecimiento" class="w-full h-auto rounded-md shadow">
+                            </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <h5 class="text-2xl font-semibold my-4">Abastecimiento</h5>
+                                <p class="text-gray-600 leading-relaxed">Registro de Documentos (Facturas). Compras, gastos, notas de crédito. Transferencias internas de mercaderías entre suscursales.</p>
+                                <ul class="space-y-2 text-gray-600 mt-4">
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Cuentas Corrientes (Crédito, Contado)</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Órdenes de Compra/Pago</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Remisión</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Proceso de Factura, Nota Crédito/Débito</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Costeo de artículos (Registro de compras)</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Clasificación por proveedor (artículos más comprados/pagados)</li>
                                 </ul>
                             </div>
-                            <div class="col">
-                                <ul class="list-unstyled">
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Clientes</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Marcas</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Grupos de Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> y más...</li>
+                        </div>
+                    </div>
+                    <div id="pills-tesoreria" class="tab-pane p-4 rounded-lg bg-white shadow-lg hidden" role="tabpanel">
+                        <div class="flex flex-wrap -mx-3">
+                            <div class="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                                <img src="https://demo.openmartpy.com/img-vital/tesoreria.png" alt="Tesorería" class="w-full h-auto rounded-md shadow">
+                            </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <h5 class="text-2xl font-semibold my-4">Tesorería</h5>
+                                <p class="text-gray-600 leading-relaxed">Control detallado de movimientos de caja y rendiciones por turnos y fechas.</p>
+                                <ul class="space-y-2 text-gray-600 mt-4">
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Rendición de caja</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Confirmación o anulación de rendiciones</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Arqueo de cajas</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Registro detallado</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Informes de movimientos</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Impresión de Informes en todos los formatos</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <img src="https://demo.openmartpy.com/img-vital/modulo-base.png" alt="" class="img-fluid">
+                    <div id="pills-rrhh" class="tab-pane p-4 rounded-lg bg-white shadow-lg hidden" role="tabpanel">
+                         <div class="flex flex-wrap -mx-3">
+                            <div class="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                                <img src="https://demo.openmartpy.com/img-vital/rrhh.png" alt="RRHH" class="w-full h-auto rounded-md shadow">
+                            </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <h5 class="text-2xl font-semibold my-4">RRHH</h5>
+                                <p class="text-gray-600 leading-relaxed">Gestión integral del talento humano, desde el registro hasta el cálculo de salarios</p>
+                                <ul class="space-y-2 text-gray-600 mt-4">
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Registro detallado por funcionario, fecha y conceptos</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Observaciones específicas y límites de crédito</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Control de horarios de ingresos/salidas</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Procesos de pre-liquidación y cierre de mes</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Informe de salarios, comisiones, horas extras</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Módulos varios -->
-        <section class="section-padding">
-            <div class="container">
-                <h2 class="mb-5 text-center lead display-6">VITAL <span class="text-vital-yellow">Market</span></h2>
-                <p class="text-center text-muted mb-5"> Vista preliminar de algunas de las principales funcionalidades del sistema de gestión</p>
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-abastecimiento" type="button" role="tab"
-                                    aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-tesoreria-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-tesoreria" type="button" role="tab"
-                                    aria-controls="pills-tesoreria" aria-selected="false">Tesorería</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-rrhh-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
-                                    aria-selected="false">RRHH</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-caja-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-caja" type="button" role="tab"
-                                    aria-controls="pills-caja" aria-selected="false">Caja</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content small" id="pills-tabContent">
-                            <div class="tab-pane fade show active p-3" id="pills-abastecimiento"
-                                role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="https://demo.openmartpy.com/img-vital/abastecimiento.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>Abastecimiento</small></h5>
-                                        <p class="text-muted">Registro de Documentos (Facturas). Compras, gastos, notas de crédito. Transferencias internas de mercaderías entre suscursales.</p>
-                                        <ul class="list-unstyled text-muted">
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Cuentas Corrientes (Crédito, Contado)</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Órdenes de Compra/Pago</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Remisión</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Proceso de Factura, Nota Crédito/Débito</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Costeo de artículos (Registro de compras)</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Clasificación por proveedor (artículos más comprados/pagados)</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div id="pills-caja" class="tab-pane p-4 rounded-lg bg-white shadow-lg hidden" role="tabpanel">
+                        <div class="flex flex-wrap -mx-3">
+                            <div class="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+                                <img src="https://demo.openmartpy.com/img-vital/caja.png" alt="Caja" class="w-full h-auto rounded-md shadow">
                             </div>
-                            <div class="tab-pane fade p-3" id="pills-tesoreria" role="tabpanel"
-                                aria-labelledby="pills-tesoreria-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="https://demo.openmartpy.com/img-vital/tesoreria.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>Tesorería</small></h5>
-                                        <p class="text-muted">Control detallado de movimientos de caja y rendiciones por turnos y fechas.</p>
-                                        <ul class="list-unstyled text-muted">
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Rendición de caja</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Confirmación o anulación de rendiciones</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Arqueo de cajas</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro detallado</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Informes de movimientos</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Impresión de Informes en todos los formatos</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade p-3" id="pills-rrhh" role="tabpanel"
-                                aria-labelledby="pills-rrhh-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="https://demo.openmartpy.com/img-vital/rrhh.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>RRHH</small></h5>
-                                        <p class="text-muted">Gestión integral del talento humano, desde el registro hasta el cálculo de salarios</p>
-                                        <ul class="list-unstyled text-muted">
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro detallado por funcionario, fecha y conceptos</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Observaciones específicas y límites de crédito</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Control de horarios de ingresos/salidas</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Procesos de pre-liquidación y cierre de mes</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Informe de salarios, comisiones, horas extras</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade p-3" id="pills-caja" role="tabpanel"
-                                aria-labelledby="pills-caja-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="https://demo.openmartpy.com/img-vital/caja.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>Caja - Punto de Venta</small></h5>
-                                        <p class="text-muted">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
-                                        <ul class="list-unstyled text-muted">
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación electrónica directa</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Multi-moneda</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación por código de barras o descripción</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de cliente eventual</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Generación de arqueo de caja</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <h5 class="text-2xl font-semibold my-4">Caja - Punto de Venta</h5>
+                                <p class="text-gray-600 leading-relaxed">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
+                                <ul class="space-y-2 text-gray-600 mt-4">
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Facturación electrónica directa</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Multi-moneda</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Facturación por código de barras o descripción</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Registro de cliente eventual</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                    <li class="flex items-center"><i class="fa fa-chevron-circle-right text-vital-yellow mr-2"></i> Generación de arqueo de caja</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- App -->
-        <section id="app" class="section-padding bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="mb-5 lead display-6">Aplicación <span class="text-vital-yellow">Móvil</span></h2>
-                        <p class="text-muted">Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.
-                        </p>
-                        <ul class="list-unstyled text-muted">
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Inventario General y/o Parcial</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Auditoría física de Mercaderías</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Corte de Inventario (personalizable)</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Multi-depósito (conteo por depósito)</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Transferencia entre depósitos</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Mayor visualización de los resultados del inventario</li>
-                        </ul>
-                        <h2 class="h5 mt-4 mb-3">Multiplataforma</h2>
-                        <p class="text-muted">Tu app estará disponible desde las principales plataformas</p>
-                        <a href="#" class="btn btn-dark btn-lg me-2 mb-2">
-                            <i class="fab fa-apple"></i> App Store
+    <section id="app" class="py-24 md:py-32 bg-vital-gray">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 pr-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-6">Aplicación <span class="text-vital-yellow">Móvil</span></h2>
+                    <p class="text-gray-600 leading-relaxed">Para el manejo eficiente del inventario con toma de inventarios y reportes personalizables.</p>
+                    <ul class="space-y-2 text-gray-600 mt-6">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Inventario General y/o Parcial</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Auditoría física de Mercaderías</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Corte de Inventario (personalizable)</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Multi-depósito (conteo por depósito)</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Transferencia entre depósitos</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Mayor visualización de los resultados del inventario</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold mt-8 mb-3">Multiplataforma</h3>
+                    <p class="text-gray-600 mb-6">Tu app estará disponible desde las principales plataformas</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="bg-gray-800 text-white hover:bg-gray-900 transition-colors duration-300 text-lg px-6 py-3 rounded-md inline-flex items-center">
+                            <i class="fab fa-apple mr-2"></i> App Store
                         </a>
-                        <a href="#" class="btn btn-dark btn-lg mb-2">
-                            <i class="fab fa-google-play"></i> Google Play
+                        <a href="#" class="bg-gray-800 text-white hover:bg-gray-900 transition-colors duration-300 text-lg px-6 py-3 rounded-md inline-flex items-center">
+                            <i class="fab fa-google-play mr-2"></i> Google Play
                         </a>
                     </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                        <img src="https://demo.openmartpy.com/img-vital/app.png" alt="" class="img-fluid">
-                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 mt-10 lg:mt-0 text-center">
+                    <img src="https://demo.openmartpy.com/img-vital/app.png" alt="App Móvil" class="w-auto max-w-sm lg:max-w-md mx-auto h-auto rounded-lg">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- E-commerce -->
-        <section class="section-padding" id="ecommerce">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <h2 class="mb-5 lead display-6">VITAL <span class="text-vital-yellow">E-commerce</span></h2>
-                        <p class="text-muted">Ventas en línea y comercio electrónico integrado con el sistema. Personalización de la tienda online con tu marca.</p>
-                        <ul class="list-unstyled text-muted">
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Relación de varias imágenes/videos por articulo</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Características & Especificaciones de productos</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Integración con plataformas de pagos online</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Control de múltiples locales de envío</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Formulario de registro de clientes</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Módulo de imágenes publicitarias</li>
-                            <li class="pb-2"><i class="fa fa-check-circle text-vital-yellow"></i> Integración con VITALMarket</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 order-lg-1 mt-4 mt-lg-0">
-                        <img src="https://demo.openmartpy.com/img-vital/ecommerce.png" alt="" class="img-fluid">
-                    </div>
+    <section id="ecommerce" class="py-24 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 lg:order-2 pl-0 lg:pl-10">
+                     <h2 class="text-3xl md:text-4xl font-semibold mb-6">VITAL <span class="text-vital-yellow">E-commerce</span></h2>
+                    <p class="text-gray-600 leading-relaxed">Ventas en línea y comercio electrónico integrado con el sistema. Personalización de la tienda online con tu marca.</p>
+                    <ul class="space-y-2 text-gray-600 mt-6">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Relación de varias imágenes/videos por articulo</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Características & Especificaciones de productos</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Integración con plataformas de pagos online</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Control de múltiples locales de envío</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Formulario de registro de clientes</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Módulo de imágenes publicitarias</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-vital-yellow mr-2"></i> Integración con VITALMarket</li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/2 lg:order-1 mt-10 lg:mt-0">
+                    <img src="https://demo.openmartpy.com/img-vital/ecommerce.png" alt="E-commerce" class="w-full h-auto rounded-lg shadow-xl">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- clientes -->
-        <section class="section-padding bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4 lead display-6">Clientes</h2>
-                <p class="text-center mb-4">Nos sentimos honrados en trabajar con estas destacadas empresas
-                </p>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
-                        <img src="https://placehold.co/200x80" alt="Cliente 1">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
-                        <img src="https://placehold.co/200x80" alt="Cliente 2">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
-                        <img src="https://placehold.co/200x80" alt="Cliente 3">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
-                        <img src="https://placehold.co/200x80" alt="Cliente 4">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2 text-center mx-2 client-logo">
-                        <img src="https://placehold.co/200x80" alt="Cliente 5">
-                    </div>
+    <section class="py-24 md:py-32 bg-vital-gray" id="clientes">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-semibold text-center mb-4">Clientes</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Nos sentimos honrados en trabajar con estas destacadas empresas</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                <div class="w-1/3 sm:w-1/4 md:w-1/5 lg:w-auto text-center">
+                    <img src="https://placehold.co/200x80/e2e8f0/a0aec0?text=Cliente+1" alt="Cliente 1" class="h-16 md:h-20 mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+                <div class="w-1/3 sm:w-1/4 md:w-1/5 lg:w-auto text-center">
+                    <img src="https://placehold.co/200x80/e2e8f0/a0aec0?text=Cliente+2" alt="Cliente 2" class="h-16 md:h-20 mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+                <div class="w-1/3 sm:w-1/4 md:w-1/5 lg:w-auto text-center">
+                    <img src="https://placehold.co/200x80/e2e8f0/a0aec0?text=Cliente+3" alt="Cliente 3" class="h-16 md:h-20 mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+                <div class="w-1/3 sm:w-1/4 md:w-1/5 lg:w-auto text-center">
+                    <img src="https://placehold.co/200x80/e2e8f0/a0aec0?text=Cliente+4" alt="Cliente 4" class="h-16 md:h-20 mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+                <div class="w-1/3 sm:w-1/4 md:w-1/5 lg:w-auto text-center">
+                    <img src="https://placehold.co/200x80/e2e8f0/a0aec0?text=Cliente+5" alt="Cliente 5" class="h-16 md:h-20 mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer id="contacto" class="bg-vital-gradient pt-5 pb-4 small text-white">
-        <div class="container">
-            <div class="row my-4">
-                <!-- Acerca de -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h5 class="fw-bold display-6 mb-3 lead"><small>Acerca de Vital Software</small></h5>
-                    <p class="">Somos una empresa especializada en el desarrollo de software de gestión
-                        empresarial. Transformamos nuestros conocimientos en soluciones integrales adaptadas a las necesidades de cada compañía, sea cual sea su rubro o tamaño.</p>
-                    <p class="">Contáctanos para transformar la gestión de tu compañía ahora.</p>
-                    <p class="">
-                        <i class="fa fa-phone"></i> Teléfono: +595 983 613-020 <br> 
-                        <i class="fa fa-envelope"></i> contacto@vitalsoftware.com.py <br> 
-                        <i class="fa fa-envelope"></i> contacto@accionproactiva.com <br> 
-                        <i class="fa fa-map-marker-alt"></i> Ciudad del Este, Alto Paraná, Paraguay.
+    <footer id="contacto" class="bg-gradient-to-br from-vital-yellow to-vital-orange-dark pt-16 pb-8 text-sm text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 my-4">
+                <div class="text-white">
+                    <h5 class="text-3xl font-bold mb-4">Acerca de Vital Software</h5>
+                    <p class="text-white/90 leading-relaxed">Somos una empresa especializada en el desarrollo de software de gestión empresarial. Transformamos nuestros conocimientos en soluciones integrales adaptadas a las necesidades de cada compañía, sea cual sea su rubro o tamaño.</p>
+                    <p class="text-white/90 mt-4 leading-relaxed">Contáctanos para transformar la gestión de tu compañía ahora.</p>
+                    <p class="text-white/90 mt-6 space-y-2">
+                        <span><i class="fa fa-phone mr-2"></i> Teléfono: +595 983 613-020</span><br>
+                        <span><i class="fa fa-envelope mr-2"></i> contacto@vitalsoftware.com.py</span><br>
+                        <span><i class="fa fa-envelope mr-2"></i> contacto@accionproactiva.com</span><br>
+                        <span><i class="fa fa-map-marker-alt mr-2"></i> Ciudad del Este, Alto Paraná, Paraguay.</span>
                     </p>
-                    <div>
-                        <a href="https://wa.me/#" target="_blank" class="btn-social btn-whatsapp me-2">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
+                    <div class="mt-6 flex flex-wrap gap-4">
+                        <a href="https://wa.me/#" target="_blank" class="inline-flex items-center bg-[#25d366] text-white font-bold px-4 py-2 rounded-md hover:bg-[#128C7E] transition-colors duration-300">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> WhatsApp
                         </a>
-                        <a href="https://m.me/#" target="_blank" class="btn-social btn-messenger">
-                            <i class="fab fa-facebook-messenger"></i> Facebook Messenger
+                        <a href="https://m.me/#" target="_blank" class="inline-flex items-center bg-[#00b2ff] text-white font-bold px-4 py-2 rounded-md hover:bg-[#006aff] transition-colors duration-300">
+                            <i class="fab fa-facebook-messenger text-xl mr-2"></i> Facebook Messenger
                         </a>
                     </div>
                 </div>
 
-                <!-- Formulario -->
-                <div class="col-lg-6">
-                    <h5 class="fw-bold display-6 mb-3 lead"><small>Envíanos un mensaje</small></h5>
-                    <p class="">Nos contactamos en menos de 24 hs.</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="contactName" placeholder="Tu nombre"
-                                required>
+                <div class="text-white">
+                    <h5 class="text-3xl font-bold mb-4">Envíanos un mensaje</h5>
+                    <p class="text-white/90">Nos contactamos en menos de 24 hs.</p>
+                    <form class="mt-6">
+                        <div class="mb-4">
+                            <input type="text" class="w-full p-3 bg-white/20 border border-white/30 rounded-md placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white" placeholder="Tu nombre" required>
                         </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="contactEmail" placeholder="tuemail@ejemplo.com"
-                                required>
+                        <div class="mb-4">
+                            <input type="email" class="w-full p-3 bg-white/20 border border-white/30 rounded-md placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white" placeholder="tuemail@ejemplo.com" required>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="contactMessage" rows="2"
-                                placeholder="Escribe tu consulta aquí..." required></textarea>
+                        <div class="mb-4">
+                            <textarea class="w-full p-3 bg-white/20 border border-white/30 rounded-md placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-white" rows="3" placeholder="Escribe tu consulta aquí..." required></textarea>
                         </div>
-                        <div class="d-grid">
-                            <button type="button" class="btn btn-submit btn-lg btn-warning" disabled>Enviar</button>
+                        <div class="grid">
+                            <button type="button" class="bg-yellow-400 text-gray-900 font-bold w-full py-3 rounded-md hover:bg-yellow-300 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed" >Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="container text-center pt-5 text-white-50">
+        <div class="container mx-auto text-center pt-8 mt-8 border-t border-white/30 text-white/70">
             VitalSoftware &copy; 2025. Todos los Derechos Reservados.
         </div>
     </footer>
 
-    </div>
+    </main>
+    <script>
+        // ... (script del menú móvil existente) ...
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        // JavaScript para las pestañas (Tabs)
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
 
-    <script src="script.js"></script>
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetPaneId = button.dataset.target;
+
+                // Ocultar todos los paneles y quitar clase activa de botones
+                tabPanes.forEach(pane => {
+                    pane.classList.add('hidden');
+                });
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active-tab', 'bg-gradient-to-br', 'from-vital-yellow', 'to-vital-orange-dark', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+
+                // Mostrar el panel objetivo y activar el botón
+                const targetPane = document.querySelector(targetPaneId);
+                if (targetPane) {
+                    targetPane.classList.remove('hidden');
+                }
+                button.classList.add('active-tab', 'bg-gradient-to-br', 'from-vital-yellow', 'to-vital-orange-dark', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                button.setAttribute('aria-selected', 'true');
+            });
+        });
+
+        // JavaScript para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
