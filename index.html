@@ -145,24 +145,17 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h2 class="mb-5 lead display-6">Módulo Base</h2>
-                        <p class="">Este módulo permite la configuración y administración de los datos fundamentales
-                            para el funcionamiento del sistema.</p>
+                        <h2 class="mb-5 lead display-6">Vital Market - Punto de Venta</h2>
+                        <p class="">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
                         <div class="row  small">
                             <div class="col">
                                 <ul class="list-unstyled">
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Sub-Grupos de Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Tipo de productos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Proveedores</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul class="list-unstyled">
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Clientes</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Marcas</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Grupos de Artículos</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> y más...</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Facturación electrónica directa</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Multi-moneda</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Facturación por código de barras o descripción</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de cliente eventual</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Generación de arqueo de caja</li>
                                 </ul>
                             </div>
                         </div>
@@ -177,13 +170,18 @@
         <!-- Módulos varios -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="mb-5 text-center lead display-6">VITAL <span class="text-vital-yellow">Market</span></h2>
-                <p class="text-center text-muted mb-5"> Vista preliminar de algunas de las principales funcionalidades del sistema de gestión</p>
+                <h2 class="mb-5 text-center lead display-6">Vistas <span class="text-vital-yellow">preliminares</span></h2>
+                <p class="text-center text-muted mb-5"> Conoce algunas de las principales funcionalidades del sistema de gestión</p>
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1 active" id="pills-abastecimiento-tab" data-bs-toggle="pill"
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1 active" id="pills-modulo-base-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-modulo-base" type="button" role="tab"
+                                    aria-controls="pills-modulo-base" aria-selected="true">Módulo Base</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-abastecimiento-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-abastecimiento" type="button" role="tab"
                                     aria-controls="pills-abastecimiento" aria-selected="true">Abastecimiento</button>
                             </li>
@@ -197,13 +195,27 @@
                                     data-bs-target="#pills-rrhh" type="button" role="tab" aria-controls="pills-rrhh"
                                     aria-selected="false">RRHH</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="btn btn-sm btn-vital-yellow rounded-pill px-4 mx-1" id="pills-caja-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-caja" type="button" role="tab"
-                                    aria-controls="pills-caja" aria-selected="false">Caja</button>
-                            </li>
                         </ul>
                         <div class="tab-content small" id="pills-tabContent">
+                            <div class="tab-pane fade show active p-3" id="pills-modulo-base"
+                                role="tabpanel" aria-labelledby="pills-modulo-base-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="https://demo.openmartpy.com/img-vital/abastecimiento.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="display-6 my-4"><small>Módulo Base</small></h5>
+                                        <p class="text-muted">Este módulo permite la configuración y administración de los datos fundamentales para el funcionamiento del sistema. Registrando:</p>
+                                        <ul class="list-unstyled text-muted">
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Artículos</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Grupos/Sub Grupos</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Proveedores</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Clientes</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Usuarios</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="tab-pane fade show active p-3" id="pills-abastecimiento"
                                 role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
                                 <div class="row">
@@ -212,7 +224,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <h5 class="display-6 my-4"><small>Abastecimiento</small></h5>
-                                        <p class="text-muted">Registro de Documentos (Facturas). Compras, gastos, notas de crédito. Transferencias internas de mercaderías entre suscursales.</p>
+                                        <p class="text-muted">Registro de Documentos (Facturas). Compras, gastos, notas de crédito. Transferencias internas de mercaderías entre sucursales.</p>
                                         <ul class="list-unstyled text-muted">
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Cuentas Corrientes (Crédito, Contado)</li>
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Órdenes de Compra/Pago</li>
@@ -251,34 +263,14 @@
                                         <img src="https://demo.openmartpy.com/img-vital/rrhh.png" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>RRHH</small></h5>
+                                        <h5 class="display-6 my-4"><small>Recursos Humanos</small></h5>
                                         <p class="text-muted">Gestión integral del talento humano, desde el registro hasta el cálculo de salarios</p>
                                         <ul class="list-unstyled text-muted">
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro detallado por funcionario, fecha y conceptos</li>
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Observaciones específicas y límites de crédito</li>
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Control de horarios de ingresos/salidas</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Procesos de pre-liquidación y cierre de mes</li>
+                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Marcación facial</li>
                                             <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Informe de salarios, comisiones, horas extras</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade p-3" id="pills-caja" role="tabpanel"
-                                aria-labelledby="pills-caja-tab">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="https://demo.openmartpy.com/img-vital/caja.png" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="display-6 my-4"><small>Caja - Punto de Venta</small></h5>
-                                        <p class="text-muted">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
-                                        <ul class="list-unstyled text-muted">
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación electrónica directa</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Multi-moneda</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Facturación por código de barras o descripción</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de cliente eventual</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
-                                            <li class="pb-2"><i class="fa fa-chevron-circle-right"></i> Generación de arqueo de caja</li>
                                         </ul>
                                     </div>
                                 </div>
