@@ -140,33 +140,6 @@
             </div>
         </section>
 
-        <!-- Módulo base -->
-        <section class="section-padding bg-vital-gradient text-white">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="mb-5 lead display-6">Vital Market - Punto de Venta</h2>
-                        <p class="">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
-                        <div class="row  small">
-                            <div class="col">
-                                <ul class="list-unstyled">
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Facturación electrónica directa</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Multi-moneda</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Facturación por código de barras o descripción</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de cliente eventual</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
-                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Generación de arqueo de caja</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <img src="https://demo.openmartpy.com/img-vital/modulo-base.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Módulos varios -->
         <section class="section-padding">
             <div class="container">
@@ -216,7 +189,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade show active p-3" id="pills-abastecimiento"
+                            <div class="tab-pane fade show p-3" id="pills-abastecimiento"
                                 role="tabpanel" aria-labelledby="pills-abastecimiento-tab">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -281,6 +254,58 @@
             </div>
         </section>
 
+        <!-- Punto de venta -->
+        <section class="section-padding bg-vital-gradient text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-5 lead display-6">Vital Market - Punto de Venta</h2>
+                        <p class="">Facilita la facturación rápida y ofrece herramientas variadas para registrar y gestionar transacciones.</p>
+                        <div class="row  small">
+                            <div class="col">
+                                <ul class="list-unstyled">
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Multi-moneda</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Facturación por código de barras o descripción</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de cliente eventual</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Registro de Pago (Contado, Tarjeta, Transferencia, QR)</li>
+                                    <li class="pb-2"><i class="fa fa-chevron-circle-right text-vital-maroon"></i> Generación de arqueo de caja</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="https://demo.openmartpy.com/img-vital/modulo-base.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="card-img-top placeholder" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title p-1">Self checkout</h5>
+                            <p class="card-text py-1">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="card-img-top placeholder" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title p-1">Facturación electrónica</h5>
+                            <p class="card-text py-1">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="card-img-top placeholder" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title p-1">Consultor de precios</h5>
+                            <p class="card-text py-1">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- App -->
         <section id="app" class="section-padding bg-light">
             <div class="container">
@@ -307,7 +332,25 @@
                         </a>
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                        <img src="https://demo.openmartpy.com/img-vital/app.png" alt="" class="img-fluid">
+                        <div id="carouselApp" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselApp" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselApp" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselApp" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://demo.openmartpy.com/img-vital/app.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://demo.openmartpy.com/img-vital/hero-4.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://demo.openmartpy.com/img-vital/hero-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
