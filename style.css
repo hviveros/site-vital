@@ -34,9 +34,12 @@ body {
 
 .btn-vital-yellow:hover {
     background-color: #e76900;
-    /* Un poco más oscuro al pasar el mouse */
     border-color: #e76800;
     color: #fff;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-modulos{
