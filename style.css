@@ -43,6 +43,11 @@ body {
     color: var(--vital-maroon);
 }
 
+.btn-social:hover{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .card-modulos{
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
